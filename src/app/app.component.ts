@@ -1,14 +1,20 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { PrimeNGConfig } from 'primeng/api';
+import { MenuComponent } from './shared/components/menu/menu.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, MenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  public title = 'PrimeNG';
+export class AppComponent implements OnInit {
+  constructor(private primengConfig: PrimeNGConfig) {}
+
+  ngOnInit() {
+    this.primengConfig.ripple = true;
+  }
 }
