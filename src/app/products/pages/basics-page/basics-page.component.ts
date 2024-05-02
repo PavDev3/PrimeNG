@@ -1,6 +1,7 @@
 import { CommonModule, registerLocaleData } from '@angular/common';
 import localeEnGB from '@angular/common/locales/en-GB';
-import localeEsES from '@angular/common/locales/es-ES';
+import localeEs from '@angular/common/locales/es';
+
 import localeFrCA from '@angular/common/locales/fr-CA';
 import { Component, OnInit } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
@@ -11,7 +12,7 @@ import { ProductsComponent } from '../../products.component';
 
 registerLocaleData(localeEnGB);
 registerLocaleData(localeFrCA);
-registerLocaleData(localeEsES);
+registerLocaleData(localeEs);
 
 @Component({
   standalone: true,
