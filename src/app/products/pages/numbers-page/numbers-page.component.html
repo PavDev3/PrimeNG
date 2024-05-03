@@ -1,1 +1,54 @@
-<p>numbers</p>
+<p-panel header="Pipe Numéricos" class="p-1">
+  <p>Pipes incluidos en Angular - CommonModule</p>
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-6">
+    <p-card header="Estructuras Enteros">
+      <ol>
+        <li>totalSells</li>
+        <li>totalSells | number</li>
+        <li>"(totalSells + 123584455 )"</li>
+        <li>totalSells | number : "1.2-2"</li>
+        <li>totalSells | currency</li>
+        <li>totalSells | currency : "BOB"</li>
+        <li>totalSells | currency : "BOB" : "symbol-narrow"</li>
+        <li>totalSells | currency : "BOB" : "symbol-narrow" : '1.4-4</li>
+      </ol>
+    </p-card>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-card header="Resultado">
+      <ol>
+        <li>{{ totalSells }}</li>
+        <li>{{ totalSells | number }}</li>
+        <li>{{ totalSells + 123584455 }}</li>
+        <li>{{ totalSells | number : "1.2-2" }}</li>
+        <li>{{ totalSells | currency }}</li>
+        <li>{{ totalSells | currency : "BOB " }}</li>
+        <li>{{ totalSells | currency : "BOB" : "symbol-narrow" }}</li>
+        <li>{{ totalSells | currency : "BOB" : "symbol-narrow" : "1.4-4" }}</li>
+      </ol>
+    </p-card>
+  </div>
+</div>
+<div class="grid">
+  <div class="col-12 md:col-6">
+    <p-card header="Estructuras Porcentaje">
+      <ol>
+        <li>percent</li>
+        <li>percent | percent</li>
+        <li>percent | percent : "1.2-2"</li>
+      </ol>
+    </p-card>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-card header="Resultado">
+      <ol>
+        <li>{{ percent }}</li>
+        <li>{{ percent | percent }}</li>
+        <li>{{ percent | percent : "1.2-2" }}</li>
+      </ol>
+    </p-card>
+  </div>
+</div>
