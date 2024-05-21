@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { BasicsPageComponent } from '../../../../products/pages/basics-page/basics-page.component';
-import { CommonPageComponent } from '../../../../products/pages/common-page/common-page.component';
 import { NumbersPageComponent } from '../../../../products/pages/numbers-page/numbers-page.component';
+import { UncommonPageComponent } from '../../../../products/pages/uncommon-page/uncommon-page.component';
 import { ProductsComponent } from '../../../../products/products.component';
 
 export const PRODUCTS_ROUTES: Routes = [
@@ -14,8 +14,8 @@ export const PRODUCTS_ROUTES: Routes = [
         component: BasicsPageComponent,
       },
       {
-        path: 'common',
-        component: CommonPageComponent,
+        path: 'uncommon',
+        component: UncommonPageComponent,
       },
       {
         path: 'numbers',
