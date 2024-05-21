@@ -1,5 +1,5 @@
 <p-panel header="Pipes No Comunes" class="p-1">
-  <p>Pipes incluidos en Angular - CommonModule</p>
+  <p>Pipes incluidos en Angular - No muy comunes</p>
 </p-panel>
 
 <div class="grid">
@@ -7,13 +7,29 @@
     <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
       <p>
         Saludo {{ name }}, {{ gender | i18nSelect : welcomeMap }} a nuestro
-        evento
+        evento.
       </p>
-      <p-button (click)="changeClient()" label="Cambiar persona"></p-button
-    ></p-fieldset>
+      <p-button (click)="changeClient()" label="Cambiar  Femenino"></p-button>
+      <p-button
+        class="mx-2"
+        (click)="changeGender()"
+        label="Cambiar  Masculino"
+      ></p-button>
+    </p-fieldset>
   </div>
   <div class="col-12 md:col-6">
-    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true"> </p-fieldset>
+    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+      <p>
+        Actualmente
+        {{ clients.length | i18nPlural : clientsMap }} esperando.
+      </p>
+      <p-button (click)="deleteClient()" label="Borrar Cliente"></p-button>
+      <p-button
+        class="mx-2"
+        (click)="addClient()"
+        label="Agregar Cliente"
+      ></p-button>
+    </p-fieldset>
   </div>
   <div class="col-12 md:col-6">
     <p-fieldset legend="Slice Pipe" [toggleable]="true"> </p-fieldset>

@@ -23,6 +23,27 @@ export class UncommonPageComponent implements OnInit {
     this.name = 'Maria';
     this.gender = 'female';
   }
+  changeGender() {
+    this.name = 'Pablo';
+    this.gender = 'male';
+  }
+
+  //i18n plural
+  public clients: string[] = ['Pablo', 'Juan', 'Pedro'];
+  public clientsMap = {
+    '=0': 'no tenemos clientes',
+    '=1': 'tenemos 1 cliente',
+    other: 'tenemos # clientes',
+  };
+
+  deleteClient() {
+    this.clients.shift();
+  }
+
+  addClient() {
+    this.clients.push('Nuevo cliente');
+  }
+
   constructor() {}
 
   ngOnInit() {}
