@@ -56,10 +56,20 @@
     </p-fieldset>
   </div>
   <div class="col-12 md:col-6">
-    <p-fieldset legend="Json Pipe" [toggleable]="true"> </p-fieldset>
+    <p-fieldset legend="Json Pipe" [toggleable]="true">
+      {{ person | json }}
+    </p-fieldset>
   </div>
   <div class="col-12 md:col-6">
-    <p-fieldset legend="KeyValue Pipe" [toggleable]="true"> </p-fieldset>
+    <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+      <ul>
+        @for ( item of person | keyvalue; track item.key ){
+        <li>
+          <b>{{ item.key | titlecase }}:</b> {{ item.value }}
+        </li>
+        }
+      </ul>
+    </p-fieldset>
   </div>
   <div class="col-12 md:col-6">
     <p-fieldset legend="Async Pipe" [toggleable]="true"> </p-fieldset>

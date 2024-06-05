@@ -53,6 +53,14 @@ export class UncommonPageComponent implements OnInit {
     this.clients.push('Nuevo cliente');
   }
 
+  //keyValuePipe
+
+  public person = {
+    name: 'Pablo',
+    age: 30,
+    city: 'Madrid',
+  };
+
   constructor() {}
 
   ngOnInit() {}
