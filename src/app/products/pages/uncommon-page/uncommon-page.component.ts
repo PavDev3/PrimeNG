@@ -29,7 +29,16 @@ export class UncommonPageComponent implements OnInit {
   }
 
   //i18n plural
-  public clients: string[] = ['Pablo', 'Juan', 'Pedro'];
+  public clients: string[] = [
+    'Pablo',
+    'Juan',
+    'Pedro',
+    'Maria',
+    'Ana',
+    'Lucia',
+    'Laura',
+    'Carlos',
+  ];
   public clientsMap = {
     '=0': 'no tenemos clientes',
     '=1': 'tenemos 1 cliente',
