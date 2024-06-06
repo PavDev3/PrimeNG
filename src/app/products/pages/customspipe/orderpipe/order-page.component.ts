@@ -4,6 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { FieldsetModule } from 'primeng/fieldset';
 import { PanelModule } from 'primeng/panel';
+import { ToggleCasePipe } from '../../../pipes/toggle-case.pipe';
 
 @Component({
   standalone: true,
@@ -15,6 +16,8 @@ import { PanelModule } from 'primeng/panel';
     CardModule,
     FieldsetModule,
     PanelModule,
+    //Pipes
+    ToggleCasePipe,
   ],
 })
 export class OrderPageComponent {}
