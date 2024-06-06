@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { FieldsetModule } from 'primeng/fieldset';
 import { PanelModule } from 'primeng/panel';
+import { interval } from 'rxjs';
 
 @Component({
   standalone: true,
@@ -60,6 +61,9 @@ export class UncommonPageComponent implements OnInit {
     age: 30,
     city: 'Madrid',
   };
+
+  //AsyncPipe
+  public myObservableTimer = interval(1000);
 
   constructor() {}
 
