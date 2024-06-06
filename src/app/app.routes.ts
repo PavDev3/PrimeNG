@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'products',
+    redirectTo: 'products/basics',
     pathMatch: 'full',
   },
   {
@@ -14,7 +14,14 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'customs',
+    loadChildren: () =>
+      import('./shared/components/menu/services/menu.routes').then(
+        (m) => m.CUSTOMS_ROUTES
+      ),
+  },
+  {
     path: '**',
-    redirectTo: 'products',
+    redirectTo: 'products/basics',
   },
 ];

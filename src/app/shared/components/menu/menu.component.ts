@@ -46,12 +46,12 @@ export class MenuComponent implements OnInit {
               {
                 label: 'Mayúsculas y minúsculas',
                 icon: 'pi pi-sort-alpha-up',
-                routerLink: 'pipes/mayúsculas',
+                routerLink: 'customs',
               },
               {
                 label: 'Ordenar',
                 icon: 'pi pi-sort-amount-up',
-                routerLink: 'pipes/ordenar',
+                routerLink: 'customs/order',
               },
             ],
           },
