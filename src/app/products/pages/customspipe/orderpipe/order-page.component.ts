@@ -5,7 +5,9 @@ import { CardModule } from 'primeng/card';
 import { FieldsetModule } from 'primeng/fieldset';
 import { PanelModule } from 'primeng/panel';
 import { SplitButtonModule } from 'primeng/splitbutton';
+import { TableModule } from 'primeng/table';
 import { ToolbarModule } from 'primeng/toolbar';
+import { Color, Hero } from '../../../interface/hero.interface';
 import { ToggleCasePipe } from '../../../pipes/toggle-case.pipe';
 
 @Component({
@@ -20,27 +22,43 @@ import { ToggleCasePipe } from '../../../pipes/toggle-case.pipe';
     PanelModule,
     ToolbarModule,
     SplitButtonModule,
+    TableModule,
     //Pipes
     ToggleCasePipe,
   ],
 })
 export class OrderPageComponent {
-  items = [
+  public isUpper: boolean = false;
+
+  public heroes: Hero[] = [
     {
-      label: 'Save',
-      icon: 'pi pi-check',
+      name: 'Superman',
+      canFly: true,
+      color: Color.Red,
     },
     {
-      label: 'Update',
-      icon: 'pi pi-refresh',
+      name: 'Batman',
+      canFly: false,
+      color: Color.Black,
     },
     {
-      label: 'Delete',
-      icon: 'pi pi-trash',
+      name: 'Flash',
+      canFly: false,
+      color: Color.Red,
     },
     {
-      label: 'Home',
-      icon: 'pi pi-home',
+      name: 'Wonder',
+      canFly: true,
+      color: Color.Blue,
+    },
+    {
+      name: 'Aquaman',
+      canFly: false,
+      color: Color.Green,
     },
   ];
+
+  toogleUpperCase() {
+    this.isUpper = !this.isUpper;
+  }
 }
