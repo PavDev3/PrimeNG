@@ -8,7 +8,10 @@ import { SplitButtonModule } from 'primeng/splitbutton';
 import { TableModule } from 'primeng/table';
 import { ToolbarModule } from 'primeng/toolbar';
 import { Color, Hero } from '../../../interface/hero.interface';
+import { CanFlyPipe } from '../../../pipes/canFly.pipe';
+import { ColorPipe } from '../../../pipes/color.pipe';
 import { ToggleCasePipe } from '../../../pipes/toggle-case.pipe';
+import { SortByPipe } from './../../../pipes/sortBy.pipe';
 
 @Component({
   standalone: true,
@@ -25,10 +28,15 @@ import { ToggleCasePipe } from '../../../pipes/toggle-case.pipe';
     TableModule,
     //Pipes
     ToggleCasePipe,
+    CanFlyPipe,
+    ColorPipe,
+    SortByPipe,
   ],
 })
 export class OrderPageComponent {
   public isUpper: boolean = false;
+
+  public sortBy?: keyof Hero;
 
   public heroes: Hero[] = [
     {
@@ -60,5 +68,13 @@ export class OrderPageComponent {
 
   toogleUpperCase() {
     this.isUpper = !this.isUpper;
+  }
+
+  changeOrder(sortBy: keyof Hero) {
+    this.sortBy = sortBy;
+  }
+
+  getColorName(colorValue: Color): string {
+    return Color[colorValue];
   }
 }
