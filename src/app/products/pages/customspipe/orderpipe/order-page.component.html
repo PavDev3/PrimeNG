@@ -1,7 +1,7 @@
 <p-panel header="Pipe Personalizados" class="p-1">
   <p>
     Pipes Customizados - Ordenar. Creado por
-    {{ "Pablo" | toggleCase : isUpper }}
+    {{ "Pablo" }}
   </p>
 </p-panel>
 
@@ -54,7 +54,7 @@
         </ng-template>
         <ng-template pTemplate="body" let-product>
           <tr>
-            <td>{{ product.name }}</td>
+            <td>{{ product.name | titlecase | toggleCase : isUpper }}</td>
             <td>{{ product.canFly | canFly }}</td>
             <td>{{ getColorName(product.color) }}</td>
           </tr>
